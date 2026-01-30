@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode - Soft Minimalist */
+    --background: 42 28% 97%; /* Warm Cream #F9F7F2 */
+    --foreground: 25 40% 20%; /* Deep Espresso Brown */
+    --card: 42 28% 97%;
+    --card-foreground: 25 40% 20%;
+    --popover: 42 28% 97%;
+    --popover-foreground: 25 40% 20%;
+    --primary: 78 20% 45%; /* Matcha Moss Green #738654 */
+    --primary-foreground: 42 28% 97%;
+    --secondary: 25 40% 30%; /* Espresso Brown */
+    --secondary-foreground: 42 28% 97%;
+    --muted: 42 20% 90%;
+    --muted-foreground: 30 10% 45%;
+    --accent: 78 20% 45%;
+    --accent-foreground: 42 28% 97%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 42 15% 85%;
+    --input: 42 15% 85%;
+    --ring: 78 20% 45%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode - Deep Forest Green/Gold */
+    --background: 150 25% 15%;
+    --foreground: 42 50% 80%;
+    --card: 150 25% 18%;
+    --card-foreground: 42 50% 80%;
+    --popover: 150 25% 15%;
+    --popover-foreground: 42 50% 80%;
+    --primary: 42 70% 55%;
+    --primary-foreground: 150 25% 15%;
+    --secondary: 95 30% 35%;
+    --secondary-foreground: 42 50% 80%;
+    --muted: 150 20% 25%;
+    --muted-foreground: 42 30% 60%;
+    --accent: 42 70% 55%;
+    --accent-foreground: 150 25% 15%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 150 20% 25%;
+    --input: 150 20% 25%;
+    --ring: 42 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-['Inter',sans-serif];
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--secondary));
+}
